@@ -6,7 +6,6 @@ interface Props {
 }
 
 export default function SideBar({position, hideSideBar}:Props) {
-  console.log(position)
   return (
     <div style={{right: position}} className={`w-[250px] transition-all duration-300 z-50 min-h-screen fixed top-0 bg-black`}>
       <div onClick={hideSideBar} className='w-8 h-8 mt-10 ml-8 mb-16 cursor-pointer'>
