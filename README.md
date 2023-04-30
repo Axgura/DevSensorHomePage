@@ -1,9 +1,13 @@
 ## Clone Home Starlink
 
 ![Screenshot](https://github.com/MateusGustavo22/starlink-clone/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-04-22.png)
+
 ![Screenshot](https://github.com/MateusGustavo22/starlink-clone/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-04-30.png)
+
 ![Screenshot](https://github.com/MateusGustavo22/starlink-clone/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-07-30.png)
+
 ![Screenshot](https://github.com/MateusGustavo22/starlink-clone/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-07-42.png)
+
 ![Screenshot](https://github.com/MateusGustavo22/starlink-clone/blob/main/public/screenshots/Captura%20de%20tela%20de%202023-04-30%2015-07-47.png)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
