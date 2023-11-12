@@ -9,54 +9,54 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="h-screen bg-[url('/imagem1.webp')] bg-cover bg-center bg-no-repeat">
+    <div className="h-screen bg-[url('/devsensor_hero.png')] bg-cover bg-center bg-no-repeat">
       <div className="w-full absolute">
         <Header />
       </div>
       <SectionMain />
       <Section2
-        imagem="/imagem2.webp"
-        title={"TRANSMISSÃO, CHAMADAS DE VÍDEO, JOGOS ON-LINE E MUITO MAIS"}
-        content1="Com a Starlink, os usuários podem se envolver em atividades que historicamente não eram possíveis com a internet via satélite."
-        content2="O serviço de alta velocidade e baixa latência da Starlink é possível por meio da maior constelação mundial de satélites mais avançados, que operam em uma órbita baixa ao redor da Terra."
-        buttonText1="SAIBA MAIS"
+        imagem="/devsensor_base.png"
+        title={"DEVSENSOR"}
+        content1="Planing the ideal posture grammar for you."
+        content2="Specs, in a brief explaination..."
+        buttonText1="Order Now"
       />
       <Section3
-        imagem="/imagem3.webp"
-        title={"AUTOINSTALAÇÃO FÁCIL"}
-        content1="O seu Kit Starlink vem com tudo o que você precisa para se conectar em minutos, incluindo a sua Starlink, um roteador Wi-Fi, cabos e a base."
-        content2={`Clique aqui para ver as especificações técnicas da Starlink.`}
-        buttonText1="VISUALIZAR INSTALAÇÂO"
+        imagem="/devsensor_pro.png"
+        title={"DEVSENSOR PRO"}
+        content1="Planing the best ideal posture grammar for the pro model."
+        content2={`Specs, for the PRO model`}
+        buttonText1="Order Now"
       />
       <Section2
-        imagem="/imagem4.webp"
-        title={"SEM CONTRATOS, TESTE DE 30 DIAS"}
-        content1="Contratos de longo prazo impedem que ambas as partes façam alterações sensatas quando necessário."
-        content2="Os contratos firmados com a Starlink são justos para ambas as partes. A Starlink pode ajustar termos e preços conforme necessário e os clientes podem cancelar a qualquer momento, por qualquer motivo."
+        imagem="/devsensor_wearable.png"
+        title={"DEVSENSOR WEARABLE"}
+        content1="Planing the best ideal posture grammar for the pro model."
+        content2={`Specs,for the wearable model`}
         content3="Experimente qualquer produto Starlink por 30 dias e, se não estiver satisfeito, devolva o equipamento e receba um reembolso total."
-        buttonText1="PEDIR AGORA"
+        buttonText1="Order Now"
       />
       <SectionFull
-        title="VIAJE COM A STARLINK"
-        imagem="/imagem5.webp"
-        content1="Os usuários da Starlink podem ter o mesmo serviço de baixa latência e de alta velocidade que têm em casa, em qualquer local. A Starlink oferece serviço com o complemento de Portabilidade."
-        content2="Para aqueles que adoram viajar, a Starlink Viagem permite que seus usuários pausem e reativem o serviço com base em suas necessidades individuais de viagem."
-        buttonText1="SAIBA MAIS"
+        title="Future with DevSensor"
+        imagem="/devsensor_base_downward.png"
+        content1="Talk about plans and records we have, and also improvement."
+        content2="More of Advancement."
+        buttonText1="Order Now"
       />
       <Section2
-        imagem="/imagem6.webp"
-        title={"GERENCIE A STARLINK DESDE O APLICATIVO MÓVEL"}
-        content1="O aplicativo da Starlink também ajuda você a personalizar as configurações, receber atualizações, acessar a Assistência, e ver dados de desempenho em tempo real como velocidade de download, latência e tempo de atividade."
-        content2="Baixe o aplicativo para determinar o melhor local para configurar antes de instalar. A Starlink precisa de uma visão clara do céu para se conectar aos satélites."
-        buttonText1="BAIXAR PARA IOS"
-        buttonText2="BAIXAR PARA ANDROID"
+        imagem="/devsensor_pro.gif"
+        title={"All model benefits explained in one Section"}
+        content1="First benefit you get from using DevSensor."
+        content2="Second benefit you get just by using DevSensor"
+        buttonText1="Order Now (Waitlist)"
+        buttonText2="Order Now"
       />
       <Section3
-        imagem="/imagem8.webp"
-        title={"GERENCIE A STARLINK DESDE O APLICATIVO MÓVEL"}
-        content1="O aplicativo da Starlink também ajuda você a personalizar as configurações, receber atualizações, acessar a Assistência, e ver dados de desempenho em tempo real como velocidade de download, latência e tempo de atividade."
-        content2="Baixe o aplicativo para determinar o melhor local para configurar antes de instalar. A Starlink precisa de uma visão clara do céu para se conectar aos satélites."
-        buttonText1="SAIBA MAIS"
+        imagem="/devsensor_base.gif"
+        title={"A question and prove finalizing why you should get DevSensor."}
+        content1="What works if you use DevSensor"
+        content2="benefits from DevSensor"
+        buttonText1="Order Now"
       />
     </div>
   );

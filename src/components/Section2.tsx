@@ -24,11 +24,11 @@ export default function Section2(props: Content) {
           <p className="text-white">{props.content2}</p>
           <p className="text-white">{props.content3}</p>
           <div className="w-full flex space-x-4 lg:flex-wrap lg:space-x-0 lg:space-y-4">
-            <button className="max-w-[300px] w-full lg:max-w-full p-3 font-semibold bg-black border-2 border-white rounded-md text-white">
+            <button className="max-w-[300px] w-full lg:max-w-full p-3 font-semibold bg-black border-2 border-white text-white">
               {props.buttonText1}
             </button>
             {props.buttonText2 ? (
-              <button className="w-[300px] lg:w-full p-3 font-semibold bg-black border-2 border-white rounded-md text-white">
+              <button className="w-[300px] lg:w-full p-3 font-semibold bg-black border-2 border-white text-white">
                 {props.buttonText2}
               </button>
             ) : null}

@@ -18,20 +18,14 @@ export default function SideBar({ position, hideSideBar }: Props) {
         <AiOutlineClose className="text-gray-400" size={32} />
       </div>
       <div className="w-full flex flex-col space-y-8 pl-8 pr-8">
-        <a className="text-white font-semibold text-sm cursor-pointer">MAPA</a>
+        <a className="text-white font-semibold text-sm cursor-pointer">DevSensor {"=>"} Base</a>
         <hr className="border-1 border-gray-600 " />
         <a className="text-white font-semibold text-sm cursor-pointer">
-          RECURSOS
+        DevSensor {"=>"} PRO
         </a>
         <hr className="border-1 border-gray-600" />
         <a className="text-white font-semibold text-sm cursor-pointer">
-          ESPECIFICAÇÔES
-        </a>
-        <hr className="border-1 border-gray-600 " />
-        <a className="text-white font-semibold text-sm cursor-pointer">MAPA</a>
-        <hr className="border-1 border-gray-600 " />
-        <a className="text-white font-semibold text-sm cursor-pointer">
-          ENTRAR
+        DevSensor {"=>"} Wearable
         </a>
         <hr className="border-1 border-gray-600 " />
       </div>
