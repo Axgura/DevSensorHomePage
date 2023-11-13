@@ -20,10 +20,10 @@ export default function Section1() {
       <div className="w-full min-h-[calc(100vh-90px)] flex place-content-between flex-col pt-8 pb-8 space-y-8">
         <div className="w-full flex pl-6 pr-6 flex-col justify-center space-y-8">
           <h2 className="text-center uppercase p-2 mt-18 font-roboto text-white font-bold text-4xl">
-          Improve and maintain your posture
+           Health, Posture and Productivity.
           </h2>
           <p className="max-w-[566px] text-white text-center m-auto text-semibold">
-            Improve and maintain your posture
+          Improve and maintain your posture while being productive.
           </p>
         </div>
         <div className="w-full h-max pl-6 pr-6 flex lg:flex-wrap lg:space-y-4 lg: lg:space-x-0 space-x-4">

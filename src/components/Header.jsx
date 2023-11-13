@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SideBar from "./Sidebar";
+import CurrencyLocation from "../Service/countryCurrency";
 
 export default function Header() {
   const [positionSideBar, setPositionSideBar] = useState(-250);
@@ -16,6 +17,14 @@ export default function Header() {
       setPositionSideBar(-250);
     }
   }
+
+  // useEffect(() => {
+  //   async function getConfigs(){
+  //     const geo_ = new CurrencyLocation();
+  //     const response = await geo_.geoLocations();
+  //   }
+  //   getConfigs();
+  // },[]);
 
   return (
     <>
