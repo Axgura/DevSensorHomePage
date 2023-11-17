@@ -10,9 +10,6 @@ export default function Section1() {
           PRO
         </a>
         <a className="text-white cursor-pointer hover:underline font-roboto font-semibold lg:hidden text-sm">
-          ULTRA
-        </a>
-        <a className="text-white cursor-pointer hover:underline font-roboto font-semibold lg:hidden text-sm">
           WEARABLE
         </a>
       </div>
