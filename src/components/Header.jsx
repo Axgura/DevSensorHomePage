@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import SideBar from "./Sidebar";
+import Link from 'next/link';
 import CurrencyLocation from "../Service/countryCurrency";
 
 export default function Header() {
@@ -18,13 +19,14 @@ export default function Header() {
     }
   }
 
-  // useEffect(() => {
-  //   async function getConfigs(){
-  //     const geo_ = new CurrencyLocation();
-  //     const response = await geo_.geoLocations();
-  //   }
-  //   getConfigs();
-  // },[]);
+  useEffect(() => {
+    async function getConfigs(){
+      const geo_ = new CurrencyLocation();
+      const response = await geo_.getCountryFromIp();
+      sessionStorage.setItem("dev-region", response);
+    }
+    getConfigs();
+  },[]);
 
   return (
     <>

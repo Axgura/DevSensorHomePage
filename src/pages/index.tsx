@@ -4,16 +4,23 @@ import SectionFull from "@/components/SectionFull";
 import { Inter } from "next/font/google";
 import Section2 from "@/components/Section2";
 import Section3 from "@/components/Section3";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
+
+
   return (
     <div className="h-screen bg-[url('/devsensor_hero.png')] bg-cover bg-center bg-no-repeat">
       <div className="w-full absolute">
         <Header />
       </div>
+
       <SectionMain />
+
       <Section2
         imagem="/devsensor_base.png"
         title={"DEVSENSOR"}
@@ -21,6 +28,7 @@ export default function Home() {
         content2="Versatile for indoor and outdoor use, with a special emphasis on desktop comfort."
         buttonText1="Order Now"
       />
+
       <Section3
         imagem="/devsensor_pro.png"
         title={"DEVSENSOR PRO"}
@@ -28,6 +36,7 @@ export default function Home() {
         content2={`The built-in LCD posture indicator ensures real-time feedback, making it a comprehensive tool for promoting overall well-being and productivity.`}
         buttonText1="Order Now"
       />
+
       <Section2
         imagem="/devsensor_wearable.png"
         title={"DEVSENSOR WEARABLE"}
@@ -36,6 +45,7 @@ export default function Home() {
         content3=""
         buttonText1="Order Now"
       />
+
       <SectionFull
         title="Future with DevSensor"
         imagem="/devsensor_base_downward.png"
@@ -43,6 +53,7 @@ export default function Home() {
         content2="This thoughtfully curated setup aims not only to enhance your physical well-being but also to maximize productivity, creating an optimal environment for your work or study sessions. Using DevSensor you get over 5years posture insight."
         buttonText1="Order Now"
       />
+
       <Section2
         imagem="/devsensor_pro.gif"
         title={"General Benefits"}
@@ -51,6 +62,7 @@ export default function Home() {
         buttonText1="Order Now (Waitlist)"
         buttonText2="Order Now"
       />
+
       <Section3
         imagem="/devsensor_base.gif"
         title={"30 DAY TRIAL"}
@@ -58,6 +70,7 @@ export default function Home() {
         content2=""
         buttonText1="Order Now"
       />
+
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import { AiOutlineClose } from "react-icons/ai";
+import Link from 'next/link';
+
 
 interface Props {
   position: number;
@@ -18,15 +20,23 @@ export default function SideBar({ position, hideSideBar }: Props) {
         <AiOutlineClose className="text-gray-400" size={32} />
       </div>
       <div className="w-full flex flex-col space-y-8 pl-8 pr-8">
-        <a className="text-white font-semibold text-sm cursor-pointer">DevSensor {"=>"} Base</a>
+        <Link 
+        href="/product/[name]" as={`/product/${"BASE"}`}
+        className="text-white font-semibold text-sm cursor-pointer">
+          DevSensor {"=>"} Base
+        </Link>
         <hr className="border-1 border-gray-600 " />
-        <a className="text-white font-semibold text-sm cursor-pointer">
+        <Link 
+        href="/product/[name]" as={`/product/${"PRO"}`}
+        className="text-white font-semibold text-sm cursor-pointer">
         DevSensor {"=>"} PRO
-        </a>
+        </Link>
         <hr className="border-1 border-gray-600" />
-        <a className="text-white font-semibold text-sm cursor-pointer">
+        <Link 
+        href="/product/[name]" as={`/product/${"WEARABLE"}`}
+        className="text-white font-semibold text-sm cursor-pointer">
         DevSensor {"=>"} Wearable
-        </a>
+        </Link>
         <hr className="border-1 border-gray-600 " />
       </div>
     </div>

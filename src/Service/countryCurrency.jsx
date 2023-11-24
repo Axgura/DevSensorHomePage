@@ -1,24 +1,25 @@
 import axios from "axios";
 
-export class CurrencyLocation {
+export default class CurrencyLocation {
 
-    async geoLocations() {
+    getCountryFromIp = async () => {
         try {
-            navigator.geolocation.getCurrentPosition(async (position) => {
-                const { latitude, longitude } = position.coords;
-             const response = await axios.get(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`);
-             if(response && response?.data) {
-                console.log(data.countryName);
-                return data?.countryName
-             } else {
-                return "";
-             }
-        });
+          const apiKey = process.env.NEXT_PUBLIC_IPINFO_API_KEY;
+
+          const response = await axios.get('https://ipinfo.io', {
+            headers: {
+                'Authorization': `Bearer ${apiKey}`,
+            },
+          });
+          const { country } = response.data;
+          console.log({ country });
+          return country;
         } catch (error) {
-            console.log(error);
-            return this.handleError(error);
+          console.error('Error fetching IP information:', error);
+          this.handleError(error);
+          return null;
         }
-    }
+      };
 
     handleError(error) {
          return error;
