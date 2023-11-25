@@ -1519,7 +1519,7 @@ Product Details
 
 .detail__content {
   position: relative;
-  height: 55rem;
+  height: auto;
 }
 
 .detail__content .content {
@@ -1528,7 +1528,6 @@ Product Details
   transition: all 0.6s ease-in-out;
   opacity: 0;
   visibility: hidden;
-  z-index: 555;
 }
 
 .detail__content .content.active {
