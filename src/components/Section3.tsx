@@ -6,9 +6,13 @@ interface Content {
   content3?: string;
   buttonText1: string;
   buttonText2?: string;
+  link: string;
 }
 
 export default function Section3(props: Content) {
+  const LinkTo = async (link: string) =>{
+    window.location.href = link;
+  }
   return (
     <div className="w-full m-2 min-h-screen h-full lg:h-max flex lg:flex-wrap bg-black lg:flex-col-reverse">
       <div className="w-full h-full lg:h-max flex pt-10 pb-10  items-center lg:pl-8 lg:pr-8 lg:justify-center">
@@ -20,11 +24,15 @@ export default function Section3(props: Content) {
           <p className="text-white">{props.content2}</p>
           <p className="text-white">{props.content3}</p>
           <div className="w-full flex space-x-4">
-            <button className="max-w-[300px] w-full lg:max-w-full p-3 font-semibold bg-black border-2 border-white text-white">
+            <button
+              onClick={() => LinkTo(props.link)}
+            className="max-w-[300px] w-full lg:max-w-full p-3 font-semibold bg-black border-2 border-white text-white">
               {props.buttonText1}
             </button>
             {props.buttonText2 ? (
-              <button className="max-w-[300px] lg:w-full w-full p-3 font-semibold bg-black border-2 border-white text-white">
+              <button 
+              onClick={() => LinkTo(props.link)}
+              className="max-w-[300px] lg:w-full w-full p-3 font-semibold bg-black border-2 border-white text-white">
                 {props.buttonText2}
               </button>
             ) : null}

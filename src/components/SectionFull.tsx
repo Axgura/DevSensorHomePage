@@ -5,6 +5,7 @@ interface Content {
   content2?: string;
   content3?: string;
   buttonText1: string;
+  link: string;
 }
 
 export default function SectionFull(props: Content) {
@@ -21,11 +22,11 @@ export default function SectionFull(props: Content) {
           <p className="text-white">{props.content1}</p>
           <p className="text-white">{props.content2}</p>
           <p className="text-white">{props.content3}</p>
-          <div className="w-full flex space-x-4">
+          {/* <div className="w-full flex space-x-4">
             <button className="max-w-[300px] w-full lg:max-w-full p-3 font-semibold bg-transparent border-2 border-white  text-white">
               {props.buttonText1}
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

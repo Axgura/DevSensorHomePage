@@ -1,9 +1,15 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 
 
 export default function Section1() {
+  const [ shipping_address, setShipping_address ] = useState("");
 
+  const onOrder = () => {
+    sessionStorage.setItem("dev-shipping-address", shipping_address);
+    window.location.href = "/product/BASE";
+  }
 
   return (
     <div className="max-w-[660px] min-h-screen felx items-center justify-center m-auto">
@@ -41,11 +47,14 @@ export default function Section1() {
         </div>
         <div className="w-full h-max pl-6 pr-6 flex lg:flex-wrap lg:space-y-4 lg: lg:space-x-0 space-x-4">
           <input
+            value={shipping_address}
+            onChange={(e) => setShipping_address(e.target.value)}
             className="w-full outline-none bg-[#ffffff2d] font-semibold text-base text-white placeholder-gray-300 p-4 border-2 "
             type="text"
             placeholder="SERVICE ADDRESS"
           />
           <button 
+          onClick={() => onOrder()}
           className="m-1 max-w-[300px] w-full lg:max-w-full p-6 font-semibold bg-white border-2 border-black  text-black"
           >
             Order Now

@@ -1,16 +1,28 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import Checkout from "../checkout";
 export const CheckoutContext = createContext({});
-
+// 4242 4242 4242 4242 (12/34) 20002
 function Product({ model, primaryJson }) {
   const [view_set, setView_set] = useState("description");
   const [quantity, setQuantity] = useState(1);
+  const [ color, setColor ] = useState("bg-black")
+  const [ region, setRegion ] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const [modelValue, setModelValue] = useState(model || "BASE");
+  const [modelValue, setModelValue] = useState("BASE");
 
   const changeValue = (value) => {
     setView_set(value);
   };
+
+    useEffect(() => {
+    if(sessionStorage.getItem("dev-region")){
+      setRegion(sessionStorage.getItem("dev-region") || "US");
+    }
+    }, []);
+
+  useEffect(() => {
+    setModelValue(model);
+  }, [])
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -35,7 +47,7 @@ function Product({ model, primaryJson }) {
                     / DevSensor Base
                   </li>
                   <li
-                    class="placeholder:cursor-pointer rounded-lg bg-slate-700 p-2 page__title focus:border-r-4 hover:border-r-4"
+                    class="cursor-pointer rounded-lg bg-slate-700 p-2 page__title focus:border-r-4 hover:border-r-4"
                     onClick={() => CreateModel("PRO")}
                   >
                     / DevSensor PRO
@@ -60,38 +72,23 @@ function Product({ model, primaryJson }) {
                   <div class="product-detail__left">
                     <div class="details__container--left">
                       <div class="product__pictures">
-                        <div class="pictures__container">
-                          <img
-                            class="picture"
-                            src="/devsensor_wearable.png"
-                            id="pic1"
-                          />
-                        </div>
-                        <div class="pictures__container">
-                          <img
-                            class="picture"
-                            src="/devsensor_pro.png"
-                            id="pic2"
-                          />
-                        </div>
-                        <div class="pictures__container">
-                          <img
-                            class="picture"
-                            src="/devsensor_pro.png"
-                            id="pic3"
-                          />
-                        </div>
-                        <div class="pictures__container">
-                          <img
-                            class="picture"
-                            src="/devsensor_pro.png"
-                            id="pic4"
-                          />
-                        </div>
+                      {
+                          primaryJson[0][modelValue]?.images
+                          .map(img => 
+                            <div class="pictures__container">
+                            <img
+                              class="picture"
+                              src={img}
+                              id="pic1"
+                            />
+                          </div>
+                          )
+                        }
+
                       </div>
                       <div class="product__picture" id="product__picture">
                         <div class="picture__container">
-                          <img src="/devsensor_base.png" id="pic" />
+                          <img src={primaryJson[0][modelValue]?.main_image} id="pic" />
                         </div>
                       </div>
                       <div class="zoom" id="zoom"></div>
@@ -105,7 +102,7 @@ function Product({ model, primaryJson }) {
                       </h3>
                       <div class="price">
                         <span class="text-bold new__price text-4xl">
-                          {primaryJson[0][modelValue]?.currency["USD"]}{" "}
+                          {region !== "NG" ? "$": "NGN"}{" "}
                           {primaryJson[0][modelValue]?.amount}
                         </span>
                       </div>
@@ -130,6 +127,7 @@ function Product({ model, primaryJson }) {
                                 {primaryJson[0][modelValue]?.colors?.map(
                                   (x) => (
                                     <div
+                                      onClick={() => setColor(x)}
                                       className={`cursor-pointer border m-1 p-1 border-white ${x} w-12 h-12 rounded-full focus:border-r-4 hover:border-r-4`}
                                     ></div>
                                   )
@@ -169,8 +167,8 @@ function Product({ model, primaryJson }) {
                               href="#"
                               class="new__price font-semibold text-3xl"
                             >
-                              {primaryJson[0][modelValue]?.currency["USD"]}{" "}
-                              200.50
+                              {region !== "NG" ? "$": "NGN"}{" "}
+                              {Math.floor((primaryJson[0][modelValue]?.amount) * quantity)}
                             </a>
                           </li>
                           <li>
@@ -277,7 +275,7 @@ function Product({ model, primaryJson }) {
             )}
           </div>
         </main>
-        <Checkout cart={[]} />
+        <Checkout cart={[{...primaryJson[0][modelValue], quantity, color }] || []} quantity={quantity} />
       </div>
     </CheckoutContext.Provider>
   );
