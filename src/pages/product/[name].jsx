@@ -1,8 +1,8 @@
 import React from 'react'
-import Product from "@/components/Product";
+import ProductComponent from "@/components/Product";
 import { useRouter } from 'next/router';
 
-function product() {
+function Product() {
     const router = useRouter();
     const { name } = router.query;
 
@@ -37,7 +37,7 @@ function product() {
           shipping_details: 
           <>
             <h3>Returns Policy</h3>
-            <p>You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).</p>
+            <p>You may return most new, unopened items within 30 days of delivery for a full refund. We&apos;ll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).</p>
             <p>You should expect to receive your refund within four weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly.</p>
             <h3>Shipping</h3>
             <p>We can ship to virtually any address in the world. Note that there are restrictions on some products, and some products cannot be shipped to international destinations.</p>
@@ -75,7 +75,7 @@ function product() {
           shipping_details:
           <>
             <h3>Returns Policy</h3>
-            <p>You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).</p>
+            <p>You may return most new, unopened items within 30 days of delivery for a full refund. We&apos;ll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).</p>
             <p>You should expect to receive your refund within four weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly.</p>
             <h3>Shipping</h3>
             <p>We can ship to virtually any address in the world. Note that there are restrictions on some products, and some products cannot be shipped to international destinations.</p>
@@ -110,7 +110,7 @@ function product() {
           shipping_details: 
           <>
             <h3>Returns Policy</h3>
-            <p>You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).</p>
+            <p>You may return most new, unopened items within 30 days of delivery for a full refund. We&apos;ll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).</p>
             <p>You should expect to receive your refund within four weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly.</p>
             <h3>Shipping</h3>
             <p>We can ship to virtually any address in the world. Note that there are restrictions on some products, and some products cannot be shipped to international destinations.</p>
@@ -126,7 +126,7 @@ function product() {
     <div>
         { 
         name && 
-        <Product 
+        <ProductComponent 
         model={name}
         primaryJson={products}
         />
@@ -135,4 +135,4 @@ function product() {
   )
 }
 
-export default product
+export default Product

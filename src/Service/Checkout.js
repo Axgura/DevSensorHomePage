@@ -1,7 +1,7 @@
 import axios from "axios";
-const URL = "http://localhost:4001" // || process.env.NEXT_PUBLIC_DABINX;
+const URL = process.env.NEXT_PUBLIC_DABINX;
 
-export default class Checkout {
+export default class CheckoutConnect {
     async orderDevSensor(region, data) {
         if(region == "NG") {
             console.log({ region });

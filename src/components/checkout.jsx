@@ -1,12 +1,13 @@
+"use client";
 import React, { useContext, useEffect, useState } from "react";
 import { loadStripe } from '@stripe/stripe-js';
-import { Elements, PaymentElement } from '@stripe/react-stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 const stripePromise = loadStripe('pk_test_51L2Gs1GFQteDhkdHLsVzquWTMScGS4lAut4zVY4Dd5epQAf1UYzx12C4wXoPUDyiTmrbfiWRSKiPupv9bZAG7cwT00FG8XRVAb');
 import { CheckoutContext } from "./Product";
-import Checkout from "../Service/Checkout";
+import CheckoutConnect from "../Service/Checkout";
 import MyCheckoutForm from "./MyCheckoutForm";
 
-function checkout({ cart, quantity }) {
+function Checkout({ cart, quantity }) {
   const [clientSecret, setClientSecret] = useState(null);
   const admin_id = "8e26a59f-4e32-43dc-889b-ef93b6a627fc";
   const product_id = "7f696a72-3d6a-4ac0-9e3f-5f55638e58cf";
@@ -21,7 +22,7 @@ function checkout({ cart, quantity }) {
   const [btn, setBtn] = useState("Order Now");
   const [disablebtn, setDisablebtn] = useState(false);
   const [ amount, setAmount ] = useState(20);
-  const checkout = new Checkout();
+  const checkout = new CheckoutConnect();
 
   useEffect(() => {
     if(sessionStorage.getItem("dev-region")){
@@ -425,4 +426,4 @@ function checkout({ cart, quantity }) {
   );
 }
 
-export default checkout;
+export default Checkout;

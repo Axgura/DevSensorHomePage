@@ -1,8 +1,11 @@
+
 import React, { createContext, useEffect, useState } from "react";
 import Checkout from "../checkout";
 export const CheckoutContext = createContext({});
 // 4242 4242 4242 4242 (12/34) 20002
-function Product({ model, primaryJson }) {
+
+
+function ProductComponent({ model, primaryJson }) {
   const [view_set, setView_set] = useState("description");
   const [quantity, setQuantity] = useState(1);
   const [ color, setColor ] = useState("bg-black")
@@ -22,7 +25,7 @@ function Product({ model, primaryJson }) {
 
   useEffect(() => {
     setModelValue(model);
-  }, [])
+  }, [model])
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -74,8 +77,8 @@ function Product({ model, primaryJson }) {
                       <div class="product__pictures">
                       {
                           primaryJson[0][modelValue]?.images
-                          .map(img => 
-                            <div class="pictures__container">
+                          .map((img, key) => 
+                            <div key={key} class="pictures__container">
                             <img
                               class="picture"
                               src={img}
@@ -125,8 +128,9 @@ function Product({ model, primaryJson }) {
                               <label for="colors">Color:</label>
                               <div className="flex m-1 mb-2">
                                 {primaryJson[0][modelValue]?.colors?.map(
-                                  (x) => (
+                                  (x, key) => (
                                     <div
+                                    key={key}
                                       onClick={() => setColor(x)}
                                       className={`cursor-pointer border m-1 p-1 border-white ${x} w-12 h-12 rounded-full focus:border-r-4 hover:border-r-4`}
                                     ></div>
@@ -281,4 +285,4 @@ function Product({ model, primaryJson }) {
   );
 }
 
-export default Product;
+export default ProductComponent;
