@@ -383,7 +383,7 @@ function Checkout({ cart, quantity }) {
                             Subtotal
                           </p>
                           <p class="font-semibold text-white">
-                          {region == "NGN"?"NGN ":"$ "} 
+                          {region == "NG"?"NGN ":"$ "} 
                           {Math.floor(cart[0]?.amount * cart[0]?.quantity)}
                           </p>
                         </div>
@@ -392,7 +392,7 @@ function Checkout({ cart, quantity }) {
                             Shipping tax
                           </p>
                           <p class="font-semibold text-white">
-                          {region == "NGN"?"NGN ":"$ "}   
+                          {region == "NG"?"NGN ":"$ "}   
                           0
                           </p>
                         </div>
@@ -401,7 +401,7 @@ function Checkout({ cart, quantity }) {
                       <div class="mt-6 flex items-center justify-between">
                         <p class="text-sm font-medium text-white">Total</p>
                         <p class="text-2xl font-semibold text-white">
-                          {region == "NGN"?"NGN ":"$ "} 
+                          {region == "NG"?"NGN ":"$ "} 
                           {Math.floor(cart[0]?.amount * cart[0]?.quantity)}
                         </p>
                       </div>
