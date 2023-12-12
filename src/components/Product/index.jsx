@@ -116,7 +116,7 @@ function ProductComponent({ model, primaryJson }) {
                         <span class="text-bold new__price text-4xl">
                           {region == "NG"?"NGN ":"$ "} 
                           {" "}
-                          {amountInNaira(primaryJson[0][modelValue]?.amount)}
+                          {(amountInNaira(primaryJson[0][modelValue]?.amount)).toLocaleString()}
                         </span>
                       </div>
                       <div class="product__review">
@@ -183,7 +183,7 @@ function ProductComponent({ model, primaryJson }) {
                             >
                               {region == "NG"?"NGN ":"$ "} 
                               {" "}
-                              {amountInNaira(Math.floor((primaryJson[0][modelValue]?.amount * quantity)))}
+                              {(amountInNaira(Math.floor((primaryJson[0][modelValue]?.amount * quantity)))).toLocaleString()}
                             </a>
                           </li>
                           <li>
