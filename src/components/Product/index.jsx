@@ -33,10 +33,11 @@ function ProductComponent({ model, primaryJson }) {
 
   const CreateModel = (value) => {
     setModelValue(value);
-  };
-
+  }
+  
   return (
     <CheckoutContext.Provider value={{ modalOpen, setModalOpen }}>
+
       <div className="">
         <header id="header" class="-mb-4 header">
           <div class="page__title-area">
@@ -105,7 +106,8 @@ function ProductComponent({ model, primaryJson }) {
                       </h3>
                       <div class="price">
                         <span class="text-bold new__price text-4xl">
-                          {region !== "NG" ? "$": "NGN"}{" "}
+                          {region == "NG"?"NGN ":"$ "} 
+                          {" "}
                           {primaryJson[0][modelValue]?.amount}
                         </span>
                       </div>
@@ -171,7 +173,8 @@ function ProductComponent({ model, primaryJson }) {
                               href="#"
                               class="new__price font-semibold text-3xl"
                             >
-                              {region !== "NG" ? "$": "NGN"}{" "}
+                              {region == "NG"?"NGN ":"$ "} 
+                              {" "}
                               {Math.floor((primaryJson[0][modelValue]?.amount) * quantity)}
                             </a>
                           </li>
@@ -281,6 +284,7 @@ function ProductComponent({ model, primaryJson }) {
         </main>
         <Checkout cart={[{...primaryJson[0][modelValue], quantity, color }] || []} quantity={quantity} />
       </div>
+
     </CheckoutContext.Provider>
   );
 }
