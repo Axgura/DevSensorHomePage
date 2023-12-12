@@ -392,7 +392,7 @@ function Checkout({ cart, quantity }) {
                           </p>
                           <p class="font-semibold text-white">
                           {region == "NG"?"NGN ":"$ "} 
-                          {Math.floor(cart[0]?.amount * cart[0]?.quantity)}
+                          {amountInNaira(Math.floor(cart[0]?.amount * cart[0]?.quantity))}
                           </p>
                         </div>
                         <div class="flex items-center justify-between">
