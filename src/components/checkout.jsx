@@ -34,6 +34,14 @@ function Checkout({ cart, quantity }) {
     }
   }, []);
 
+  const amountInNaira = (dollar) => {
+    if(region == "NG"){
+      return Math.floor(dollar * 1123);
+    } else{
+      return value;
+    }
+  }
+
   useEffect(() => {
     sessionStorage.setItem("dev-shipping-address", shipping_address);
   }, [shipping_address]);
@@ -227,7 +235,7 @@ function Checkout({ cart, quantity }) {
                                 : x?.description || ""}
                             </span>
                             <p class="text-lg font-bold">
-                              {region == "NGN"?"NGN":"$"} {x?.amount}
+                              {region == "NG"?"NGN":"$"} {amountInNaira(x?.amount)}
                               {" "}({"x"}{x?.quantity})
                             </p>
                           </div>
@@ -402,7 +410,8 @@ function Checkout({ cart, quantity }) {
                         <p class="text-sm font-medium text-white">Total</p>
                         <p class="text-2xl font-semibold text-white">
                           {region == "NG"?"NGN ":"$ "} 
-                          {Math.floor(cart[0]?.amount * cart[0]?.quantity)}
+                          {amountInNaira(Math.floor(cart[0]?.amount * cart[0]?.quantity))}
+                          
                         </p>
                       </div>
                     </div>

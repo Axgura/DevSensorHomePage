@@ -13,6 +13,14 @@ function ProductComponent({ model, primaryJson }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [modelValue, setModelValue] = useState("BASE");
 
+  const amountInNaira = (dollar) => {
+    if(region == "NG"){
+      return Math.floor(dollar * 1123);
+    } else{
+      return value;
+    }
+  }
+
   const changeValue = (value) => {
     setView_set(value);
   };
@@ -108,7 +116,7 @@ function ProductComponent({ model, primaryJson }) {
                         <span class="text-bold new__price text-4xl">
                           {region == "NG"?"NGN ":"$ "} 
                           {" "}
-                          {primaryJson[0][modelValue]?.amount}
+                          {amountInNaira(primaryJson[0][modelValue]?.amount)}
                         </span>
                       </div>
                       <div class="product__review">
@@ -175,7 +183,7 @@ function ProductComponent({ model, primaryJson }) {
                             >
                               {region == "NG"?"NGN ":"$ "} 
                               {" "}
-                              {Math.floor((primaryJson[0][modelValue]?.amount) * quantity)}
+                              {amountInNaira(Math.floor((primaryJson[0][modelValue]?.amount * quantity)))}
                             </a>
                           </li>
                           <li>
