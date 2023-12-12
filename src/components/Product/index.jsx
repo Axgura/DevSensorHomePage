@@ -17,7 +17,7 @@ function ProductComponent({ model, primaryJson }) {
     if(region == "NG"){
       return Math.floor(dollar * 1123);
     } else{
-      return value;
+      return dollar;
     }
   }
 
