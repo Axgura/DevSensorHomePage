@@ -22,7 +22,7 @@ export default function Home() {
       <SectionMain />
 
       <Section2
-        imagem="/devsensor_base.png"
+        imagem="/devsensor_base.webp"
         title={"DEVSENSOR"}
         content1="Intentionally crafted for your well-being, promoting focused productivity and a relaxed posture."
         content2="Versatile for indoor and outdoor use, with a special emphasis on desktop comfort."
@@ -31,7 +31,7 @@ export default function Home() {
       />
 
       <Section3
-        imagem="/devsensor_pro.png"
+        imagem="/devsensor_pro.webp"
         title={"DEVSENSOR PRO"}
         content1="Delivering a host of added benefits, this solution not only offers posture reminders but also provides personalized workout guidance."
         content2={`The built-in LCD posture indicator ensures real-time feedback, making it a comprehensive tool for promoting overall well-being and productivity.`}
@@ -40,7 +40,7 @@ export default function Home() {
       />
 
       <Section2
-        imagem="/devsensor_wearable.png"
+        imagem="/devsensor_wearable.webp"
         title={"DEVSENSOR WEARABLE"}
         content1="Made for comfort, whether you're inside or outside. Easy to use and works well in both settings, making things more efficient for you."
         content2={"Uses the way you move your hands to predict your body posture and provide guidance for workouts."}
@@ -51,7 +51,7 @@ export default function Home() {
 
       <SectionFull
         title="Future with DevSensor"
-        imagem="/devsensor_base_downward.png"
+        imagem="/devsensor_base_downward.webp"
         content1="The carefully crafted ecosystem, inclusive of ergonomic chairs, well-designed tables, and the innovative DevSensor, is specifically engineered to elevate your sitting posture, providing comfort and support."
         content2="This thoughtfully curated setup aims not only to enhance your physical well-being but also to maximize productivity, creating an optimal environment for your work or study sessions. Using DevSensor you get over 5years posture insight."
         buttonText1="Order Now"

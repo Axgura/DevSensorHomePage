@@ -16,10 +16,14 @@ const MyCheckoutForm = ({ handlePayment }) => {
     await handlePayment(elements, stripe);
     setBtn("Make Payment");
   };
+  const CardElementOptions = {
+     layout: "tabs"
+  }
 
   return (
     <form class="mt-5 grid gap-6" onSubmit={handleSubmit}>
       <CardElement 
+      options={CardElementOptions}
       className='text-white bg-black'
       />
       <button 

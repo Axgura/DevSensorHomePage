@@ -53,12 +53,13 @@ export default function Section1() {
             type="text"
             placeholder="SERVICE ADDRESS"
           />
-          <button 
-          onClick={() => onOrder()}
-          className="m-1 max-w-[300px] w-full lg:max-w-full p-6 font-semibold bg-white border-2 border-black  text-black"
+          <Link 
+          href="/product/[name]" as={`/product/${"BASE"}`}
+          // onClick={() => onOrder()}
+          className="text-center m-1 max-w-[300px] w-full lg:max-w-full p-6 font-semibold bg-white border-2 border-black  text-black"
           >
             Order Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -10,8 +10,8 @@ function Product() {
       {
         "BASE": {
           model: "BASE",
-          main_image: "/devsensor_base.png",
-          images: ["/devsensor_base.png", "/devsensor_base.png"],
+          main_image: "/devsensor_base.webp",
+          images: ["/devsensor_base.webp", "/devsensor_base.webp"],
           product_name: "DevSensor",
           amount: 99.9,
           currency: { "USD": "$", "NGN": "NGN" },
@@ -46,8 +46,8 @@ function Product() {
         },
         "PRO": {
           model: "PRO",
-          main_image: "/devsensor_pro.png",
-          images: ["/devsensor_pro.png", "/devsensor_pro.png"],
+          main_image: "/devsensor_pro.webp",
+          images: ["/devsensor_pro.webp", "/devsensor_pro.webp"],
           product_name: "PRO",
           amount: 149.9,
           currency: { "USD": "$", "NGN": "NGN" },
@@ -84,8 +84,8 @@ function Product() {
         },
         "WEARABLE": {
           model: "WEARABLE",
-          main_image: "/devsensor_wearable.png",
-          images: ["/devsensor_wearable.png", "/devsensor_wearable.png"],
+          main_image: "/devsensor_wearable.webp",
+          images: ["/devsensor_wearable.webp", "/devsensor_wearable.webp"],
           product_name: "WEARABLE",
           amount: 59.9,
           currency: { "USD": "$", "NGN": "NGN" },

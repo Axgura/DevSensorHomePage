@@ -154,6 +154,15 @@ function Checkout({ cart, quantity }) {
     }
   };
 
+  const appearance = {
+    theme: "stripe"
+  }
+
+  const options = {
+    clientSecret,
+    appearance
+  }
+
   return (
     <div>
       
@@ -202,7 +211,7 @@ function Checkout({ cart, quantity }) {
               {
                 clientSecret
                 ?
-                <Elements stripe={stripePromise}>
+                <Elements stripe={stripePromise} options={options} >
                 <MyCheckoutForm handlePayment={handlePayment} />
                 </Elements>
                 :
