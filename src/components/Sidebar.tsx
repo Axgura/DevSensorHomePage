@@ -38,6 +38,12 @@ export default function SideBar({ position, hideSideBar }: Props) {
         DevSensor {"=>"} Wearable
         </Link>
         <hr className="border-1 border-gray-600 " />
+        <Link 
+        href="https://devsensor-v1.netlify.app"
+        className="text-white font-semibold text-sm cursor-pointer">
+          Dashboard
+        </Link>
+        <hr className="border-1 border-gray-600 " />
       </div>
     </div>
   );
