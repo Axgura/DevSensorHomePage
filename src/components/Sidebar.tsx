@@ -39,7 +39,7 @@ export default function SideBar({ position, hideSideBar }: Props) {
         </Link>
         <hr className="border-1 border-gray-600 " />
         <Link 
-        href="https://devsensor-v1.netlify.app"
+        href="https://devsensor-dashboard.netlify.app"
         className="text-white font-semibold text-sm cursor-pointer">
           Dashboard
         </Link>
