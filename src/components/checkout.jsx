@@ -137,9 +137,16 @@ function Checkout({ cart, quantity }) {
         alert("Unable to complete request. Please make sure all details are provided.");
       }
       } else {
-        const c_s = result?.data?.link_data?.url; // client_secret;
+        const c_s = result?.data?.link_data?.client_secret;
+        const url_redirect = result?.data?.link_data?.url;
+        if(c_s){
         console.log({ c_s });
         setClientSecret(c_s);
+        } else if (url_redirect){
+          window.location = url_redirect;
+        } else {
+          alert("Order not available currently");
+        }
       }
 
       setBtn("Place Order");
