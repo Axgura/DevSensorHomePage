@@ -137,7 +137,7 @@ function Checkout({ cart, quantity }) {
         alert("Unable to complete request. Please make sure all details are provided.");
       }
       } else {
-        const c_s = result?.data?.link_data?.client_secret;
+        const c_s = result?.data?.link_data?.url; // client_secret;
         console.log({ c_s });
         setClientSecret(c_s);
       }
